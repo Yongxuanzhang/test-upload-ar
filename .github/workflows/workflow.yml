@@ -6,7 +6,7 @@ env:
   REGION: us-central1
   GAR_LOCATION: us-central1-docker.pkg.dev/test-gha-upload/test-img/
 
-job:
+jobs:
   build-push-artifact:
     runs-on: ubuntu-latest
     steps:
