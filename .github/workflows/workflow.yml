@@ -4,7 +4,7 @@ on: [push]
 
 env:
   REGION: us-central1
-  GAR_LOCATION: us-central1-docker.pkg.dev/test-gha-upload/test-img/
+  GAR_LOCATION: us-central1-docker.pkg.dev/test-gha-upload/test-img
 
 jobs:
   build-push-artifact:
@@ -31,7 +31,7 @@ jobs:
           gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
 
       - name: Build image
-        run: docker build . --tag ${{ env.GAR_LOCATION }}
+        run: docker build --tag ${{ env.GAR_LOCATION }} .
 
       - name: Push image
         run: docker push ${{ env.GAR_LOCATION }}
