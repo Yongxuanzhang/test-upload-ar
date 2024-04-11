@@ -4,7 +4,7 @@ on: [push]
 
 env:
   REGION: us-central1
-  GAR_LOCATION: us-central1-docker.pkg.dev/test-gha-upload/test-img
+  GAR_LOCATION: us-central1-docker.pkg.dev/gitlab-zhangquan/test-repo/test-gh-img
 
 jobs:
   build-push-artifact:
